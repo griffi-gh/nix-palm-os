@@ -21,6 +21,7 @@ let
       hash = "sha256-CHBa4KBtVZIrpTPWsEhFzaXQnnIQLYnYNzpsXeFe0TY=";
     };
     patches = [
+      # patches originally created by Dmitry Grinberg (https://dmitry.gr/)
       (fetchpatch {
         url = "https://github.com/griffi-gh/Retro68-palm/commit/812f86d3c0c572877e6e7ffcca31eeb6f7725a50.patch";
         hash = "sha256-xjwsPqzOSS/CDUJzHaTK8spOBouUEcqlhptXm4krYkI=";
