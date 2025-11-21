@@ -43,8 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
   meta = {
-    description = "Palm OS resource compiler ";
+    description = "Palm OS resource compiler (3.3.0 unofficial)";
     homepage = "https://github.com/jichu4n/pilrc";
     license = lib.licenses.gpl2Only;
+    broken = true; # produces corrupted PRCs
   };
 })
