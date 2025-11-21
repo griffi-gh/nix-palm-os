@@ -121,11 +121,11 @@ lib.makeScope newScope (self: {
   #   '';
   # };
 
-  toolchain_combined = symlinkJoin {
-    name = "retro68-palm.toolchain_combined";
-    paths = [
-      self.binutils_unwrapped
-      self.gcc_unwrapped
-    ];
-  };
+  # toolchain_combined = symlinkJoin {
+  #   name = "retro68-palm.toolchain_combined";
+  #   paths = [
+  #     self.binutils_unwrapped
+  #     self.gcc_unwrapped
+  #   ];
+  # };
 })
