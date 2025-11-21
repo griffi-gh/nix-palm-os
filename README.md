@@ -10,3 +10,5 @@ Includes the following packages:
 - Retro68-palm - modern gcc for Palm OS development, with [patches by Dmitry Grinberg](https://www.reddit.com/r/Palm/comments/p81m58/announce_new_gcc_or_palmos_again/)
 
 (work in progress)
+
+For example, see: https://github.com/griffi-gh/nix-palm-os-hello-world
