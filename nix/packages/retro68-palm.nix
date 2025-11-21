@@ -2,6 +2,7 @@
   lib,
   stdenv,
   newScope,
+  symlinkJoin,
   wrapBintoolsWith,
   wrapCCWith,
   fetchFromGitHub,
@@ -119,4 +120,12 @@ lib.makeScope newScope (self: {
   #     echo "" > $out/nix-support/add-hardening.sh
   #   '';
   # };
+
+  toolchain_combined = symlinkJoin {
+    name = "retro68-palm.toolchain_combined";
+    paths = [
+      self.binutils_unwrapped
+      self.gcc_unwrapped
+    ];
+  };
 })
