@@ -7,7 +7,7 @@
   texinfo,
   perl,
   ncurses,
-  palm-os-sdk,
+# palm-os-sdk,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "prc-tools-remix";
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     ncurses
     stdenv.cc.libc
-    palm-os-sdk
+    # palm-os-sdk
   ];
 
   AR = "${stdenv.cc.bintools.bintools}/bin/ar";
@@ -69,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     export MAKEINFO=true MAKEINFOFLAGS=
     ../prc-tools-2.3/configure \
       --prefix=$out \
-      --with-palmdev-prefix=${palm-os-sdk} \
+      # --with-palmdev-prefix=''${palm-os-sdk} \
       --target=m68k-palmos \
       --host=i686-linux \
       --build=i686-linux \
