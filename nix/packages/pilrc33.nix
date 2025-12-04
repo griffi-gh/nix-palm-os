@@ -1,12 +1,11 @@
-# TODO
 {
   lib,
-  stdenv,
+  multiStdenv,
   fetchzip,
   stdenvNoCC,
   ...
 }:
-stdenv.mkDerivation (finalAttrs: {
+multiStdenv.mkDerivation (finalAttrs: {
   pname = "pilrc";
   version = "3.3.0-unofficial";
 
@@ -40,12 +39,12 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   configureScript = "unix/configure";
-  env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
+  env.NIX_CFLAGS_COMPILE = "-m32 -Wno-error=incompatible-pointer-types";
 
   meta = {
     description = "Palm OS resource compiler (3.3.0 unofficial)";
     homepage = "https://github.com/jichu4n/pilrc";
     license = lib.licenses.gpl2Only;
-    broken = true; # produces corrupted PRCs
+    platforms = [ "x86_64-linux" ];
   };
 })
